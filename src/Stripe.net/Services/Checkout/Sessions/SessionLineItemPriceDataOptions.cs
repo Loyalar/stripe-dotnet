@@ -1,8 +1,6 @@
-namespace Stripe
+namespace Stripe.Checkout
 {
-    using System;
     using Newtonsoft.Json;
-    using Stripe.Infrastructure;
 
     public class SessionLineItemPriceDataOptions : INestedOptions
     {

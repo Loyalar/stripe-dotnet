@@ -1,6 +1,5 @@
 namespace Stripe
 {
-    using System;
     using Newtonsoft.Json;
     using Stripe.Infrastructure;
 
@@ -19,10 +18,10 @@ namespace Stripe
         public string EmvAuthData { get; set; }
 
         [JsonProperty("exp_month")]
-        public long ExpMonth { get; set; }
+        public long? ExpMonth { get; set; }
 
         [JsonProperty("exp_year")]
-        public long ExpYear { get; set; }
+        public long? ExpYear { get; set; }
 
         [JsonProperty("fingerprint")]
         public string Fingerprint { get; set; }

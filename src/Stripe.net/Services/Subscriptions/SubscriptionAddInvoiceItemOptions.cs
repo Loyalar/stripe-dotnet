@@ -1,6 +1,5 @@
 namespace Stripe
 {
-    using System.Collections.Generic;
     using Newtonsoft.Json;
 
     public class SubscriptionAddInvoiceItemOptions : INestedOptions
@@ -9,7 +8,7 @@ namespace Stripe
         public string Price { get; set; }
 
         [JsonProperty("price_data")]
-        public InvoiceItemPriceDataOptions PriceData { get; set; }
+        public SubscriptionAddInvoiceItemPriceDataOptions PriceData { get; set; }
 
         [JsonProperty("quantity")]
         public long? Quantity { get; set; }

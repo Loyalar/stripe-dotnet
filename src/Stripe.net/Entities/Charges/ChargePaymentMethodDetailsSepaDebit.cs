@@ -1,7 +1,6 @@
 namespace Stripe
 {
     using Newtonsoft.Json;
-    using Stripe.Infrastructure;
 
     public class ChargePaymentMethodDetailsSepaDebit : StripeEntity<ChargePaymentMethodDetailsSepaDebit>
     {
@@ -19,5 +18,8 @@ namespace Stripe
 
         [JsonProperty("last4")]
         public string Last4 { get; set; }
+
+        [JsonProperty("mandate")]
+        public string Mandate { get; set; }
     }
 }

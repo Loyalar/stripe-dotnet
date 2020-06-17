@@ -14,7 +14,7 @@ namespace Stripe
         public decimal? ApplicationFeePercent { get; set; }
 
         [JsonProperty("billing_thresholds")]
-        public SubscriptionBillingThresholds BillingThresholds { get; set; }
+        public SubscriptionSchedulePhaseBillingThresholds BillingThresholds { get; set; }
 
         [JsonProperty("collection_method")]
         public string CollectionMethod { get; set; }
@@ -66,24 +66,26 @@ namespace Stripe
 
         [JsonProperty("end_date")]
         [JsonConverter(typeof(DateTimeConverter))]
-        public DateTime? EndDate { get; set; }
+        public DateTime EndDate { get; set; }
 
         [JsonProperty("invoice_settings")]
-        public SubscriptionScheduleInvoiceSettings InvoiceSettings { get; set; }
+        public SubscriptionSchedulePhaseInvoiceSettings InvoiceSettings { get; set; }
 
         [JsonProperty("plans")]
-        public List<SubscriptionSchedulePhaseItem> Plans { get; set; }
+        public List<SubscriptionSchedulePhasePlan> Plans { get; set; }
+
+        [JsonProperty("proration_behavior")]
+        public string ProrationBehavior { get; set; }
 
         [JsonProperty("start_date")]
         [JsonConverter(typeof(DateTimeConverter))]
-        public DateTime? StartDate { get; set; }
+        public DateTime StartDate { get; set; }
 
-        [Obsolete("Use DefaultTaxRates")]
         [JsonProperty("tax_percent")]
         public decimal? TaxPercent { get; set; }
 
         [JsonProperty("transfer_data")]
-        public SubscriptionTransferData TransferData { get; set; }
+        public SubscriptionSchedulePhaseTransferData TransferData { get; set; }
 
         [JsonProperty("trial_end")]
         [JsonConverter(typeof(DateTimeConverter))]

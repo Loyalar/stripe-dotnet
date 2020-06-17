@@ -6,7 +6,7 @@ namespace Stripe
     public class SubscriptionScheduleDefaultSettings : StripeEntity<SubscriptionScheduleDefaultSettings>
     {
         [JsonProperty("billing_thresholds")]
-        public SubscriptionBillingThresholds BillingThresholds { get; set; }
+        public SubscriptionScheduleDefaultSettingsBillingThresholds BillingThresholds { get; set; }
 
         [JsonProperty("collection_method")]
         public string CollectionMethod { get; set; }
@@ -33,9 +33,9 @@ namespace Stripe
         #endregion
 
         [JsonProperty("invoice_settings")]
-        public SubscriptionScheduleInvoiceSettings InvoiceSettings { get; set; }
+        public SubscriptionScheduleDefaultSettingsInvoiceSettings InvoiceSettings { get; set; }
 
         [JsonProperty("transfer_data")]
-        public SubscriptionTransferData TransferData { get; set; }
+        public SubscriptionScheduleDefaultSettingsTransferData TransferData { get; set; }
     }
 }

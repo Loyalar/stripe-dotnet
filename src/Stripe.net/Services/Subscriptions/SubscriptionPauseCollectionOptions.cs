@@ -6,11 +6,11 @@ namespace Stripe
 
     public class SubscriptionPauseCollectionOptions : INestedOptions
     {
-      [JsonProperty("behavior")]
-      public string Behavior { get; set; }
+        [JsonProperty("behavior")]
+        public string Behavior { get; set; }
 
-      [JsonProperty("resumes_at")]
-      [JsonConverter(typeof(DateTimeConverter))]
-      public DateTime? ResumesAt { get; set; }
+        [JsonProperty("resumes_at")]
+        [JsonConverter(typeof(DateTimeConverter))]
+        public DateTime? ResumesAt { get; set; }
     }
 }

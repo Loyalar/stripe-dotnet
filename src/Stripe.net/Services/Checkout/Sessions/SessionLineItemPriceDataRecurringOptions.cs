@@ -1,6 +1,5 @@
-namespace Stripe
+namespace Stripe.Checkout
 {
-    using System.Collections.Generic;
     using Newtonsoft.Json;
 
     public class SessionLineItemPriceDataRecurringOptions : INestedOptions

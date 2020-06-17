@@ -1,12 +1,11 @@
 namespace Stripe.Issuing
 {
-    using System;
     using Newtonsoft.Json;
 
     public class CardShippingOptions : INestedOptions
     {
         [JsonProperty("address")]
-        public AddressOptions Address { get; set; }
+        public CardShippingAddressOptions Address { get; set; }
 
         [JsonProperty("name")]
         public string Name { get; set; }
